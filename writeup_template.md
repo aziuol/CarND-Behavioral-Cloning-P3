@@ -90,7 +90,7 @@ After the 5th convolutional layer, the data is flattened and there are 4 fully c
 
 The below table is a summary of the CNN implementation.
 
-Layer (type)                 Output Shape              Param #
+Layer (type)                 Output Shape              Param 
 =================================================================
 lambda_1 (Lambda)            (None, 64, 64, 3)         0
 _________________________________________________________________
