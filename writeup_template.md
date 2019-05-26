@@ -214,6 +214,8 @@ I would like to thank fellow Udacity students, who provided valuable insights on
 #### 5. References
 
 [1]  Jeremy-Shannon, CarND-Behavioural-Cloning-Project,  https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project, 2017
+
 [2]  David A. Ventimiglia, CarND-Behavioral-Cloning, https://github.com/dventimi/CarND-Behavioral-Cloning, 2017
+
 [3]  An Nguyen, SDC-P3 BehavouralCloning, https://github.com/ancabilloni/SDC-P3-BehavioralCloning, 2017
 
