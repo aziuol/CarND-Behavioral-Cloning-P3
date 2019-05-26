@@ -199,6 +199,10 @@ The view as seen by the model steering right:
 The view as seen on the test simulator steering left:
 ![The view as seen by the test simulator steering left][steer_left2]
 
+A video of the simulation running in autonomous mode running the model is here:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/B2P188iXLto/0.jpg)](https://www.youtube.com/watch?v=B2P188iXLto)
+
+
 [Video of the test simulation is here in the lakeside track.] https://youtu.be/B2P188iXLto
 
 #### 4. Acknowledgements and closing remarks
