@@ -188,7 +188,9 @@ I was able to experiment with different datasets such as "wobble driving" 2x ful
 
 The model is successful in steering robustly in the lakeside track, a minimum of 1 epochs is required for correct steering and successful driving.
 
-![Image Balancing is shown here, prior to balancing of the dataset a large portion of the dataset was straight steering][balancing_training_data.jpg]
+Image Balancing is shown here, prior to balancing of the dataset a large portion of the dataset was straight steering.
+[Image_Balancing
+
 As discussed earlier, the straight steering sample set was pruned to balance the data.
 
 ### Model Architecture and Training Strategy
@@ -228,11 +230,18 @@ I did not repeat the process on track 2, as I wanted to test he model performanc
 If not I will then add training with track 2.
 
 Here are some examples of driving behaviour in autonomous mode.  
-![straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
+[straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
+
 ![Another example of straigh steering performed by the model][steer_straight2]
+The view as seen by the model.
 ![steer_left1] [steer_left1.png]
+The view as seen on the test simulator.
 ![steer_left2] [steer_left2.png]
+
+The view as seen by the model
 ![steer_right1] [steer_right1.png]
+
+The view as seen by the test simulator
 ![steer_right2] [steer_left2.png]
 
 ![Video of the test simulation is here in the lakeside track.] [https://youtu.be/B2P188iXLto]
