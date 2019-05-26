@@ -235,7 +235,7 @@ Here are some examples of driving behaviour in autonomous mode.
 ![Right steering] [steer_right1.png]
 ![Right steering] [steer_left2.png]
 
-![Video of the test simulation is here in the lakeside track.] [run1.mp4]
+![Video of the test simulation is here in the lakeside track.] [https://youtu.be/B2P188iXLto]
 
 #### 4. Acknowledgements and closing remarks
 The next challenge will be to prepare a model capable of driving autonomously on the jungle track. 
@@ -247,5 +247,5 @@ I would like to thank fellow Udacity students, who provided valuable insights on
 
 [1]  Jeremy-Shannon, CarND-Behavioural-Cloning-Project,  https://github.com/jeremy-shannon/CarND-Behavioral-Cloning-Project, 2017
 [2]  David A. Ventimiglia, CarND-Behavioral-Cloning, https://github.com/dventimi/CarND-Behavioral-Cloning, 2017
-[3]  An Nguyen, SDC-P3 BehavouralCloning https://github.com/ancabilloni/SDC-P3-BehavioralCloning, 2017
+[3]  An Nguyen, SDC-P3 BehavouralCloning, https://github.com/ancabilloni/SDC-P3-BehavioralCloning, 2017
 
