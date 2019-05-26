@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 [steer_right1]: examples/steer_right1.png "Steer Right example1- autonomous mode"
 [steer_right2]: ./examples/steer_right2.png "Steer Right example 2- autonomous mode"
 [steer_left1]: ./examples/steer_left1.png "Steer Left example 1- autonomous mode"
-[steer_left2]: ./examples/steer_left2.png "Steer Left example 2- autonomous mode"
+[steer_left2]: ./examples/steer_left_2.png "Steer Left example 2- autonomous mode"
 [steer_straight1]: ./examples/steer_straight1.png "Steer straight example 1- autonomous mode"
 [steer_straight2]: ./examples/steer_straight2.png "The view as seen by the test simulator steering left"
 [train_straight]: ./examples/train_straight.png "Steer straight example- training mode"
@@ -182,10 +182,10 @@ I did not repeat the process on track 2, as I wanted to test he model performanc
 If not I will then add training with track 2.
 
 Here are some examples of driving behaviour in autonomous mode.  
-![straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
+![straight steering][steer_straight1].  Note that this is a screenshot taken while running the simulation.
 
 ![Another example of straigh steering performed by the model][steer_straight2]
-![The view as seen by the model steering left] [steer_left1]
+![The view as seen by the model steering left][steer_left1]
 ![The view as seen on the test simulator steering left][steer_left2]
 ![The view as seen by the model steering right][steer_right1]
 ![The view as seen by the test simulator steering left][steer_left2]
