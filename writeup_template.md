@@ -184,10 +184,19 @@ If not I will then add training with track 2.
 Here are some examples of driving behaviour in autonomous mode.  
 ![straight steering][steer_straight1].  Note that this is a screenshot taken while running the simulation.
 
+Another example of straight steering performed by the model:
 ![Another example of straigh steering performed by the model][steer_straight2]
+
+The view as seen by the model steering left:
 ![The view as seen by the model steering left][steer_left1]
+
+The view as seen on the test simulator steering left:
 ![The view as seen on the test simulator steering left][steer_left2]
+
+The view as seen by the model steering right:
 ![The view as seen by the model steering right][steer_right1]
+
+The view as seen on the test simulator steering left:
 ![The view as seen by the test simulator steering left][steer_left2]
 
 [Video of the test simulation is here in the lakeside track.] https://youtu.be/B2P188iXLto
