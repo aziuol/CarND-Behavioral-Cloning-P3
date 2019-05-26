@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [steer_left1]: ./examples/steer_left1.png "Steer Left example 1- autonomous mode"
 [steer_left2]: ./examples/steer_left2.png "Steer Left example 2- autonomous mode"
 [steer_straight1]: ./examples/steer_straight1.png "Steer straight example 1- autonomous mode"
-[steer_straight2]: ./examples/steer_straight2.png "Steer straight example 2- autonomous mode"
+[steer_straight2]: ./examples/steer_straight2.png "The view as seen by the test simulator steering left"
 [train_straight]: ./examples/train_straight.png "Steer straight example- training mode"
 [run1.mp4]: ./examples/run1.mp4 "Lakeside driving - autonomous mode"
 [Image_Balancing]: ./examples/balancing_training_data.png "Pre and post balancing of training dataset"
@@ -185,16 +185,10 @@ Here are some examples of driving behaviour in autonomous mode.
 ![straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
 
 ![Another example of straigh steering performed by the model][steer_straight2]
-The view as seen by the model.
-![steer_left1] [steer_left1]
-The view as seen on the test simulator.
-![steer_left2] [steer_left2]
-
-The view as seen by the model
-![steer_right1] [steer_right1]
-
-The view as seen by the test simulator
-![steer_right2] [steer_left2]
+![The view as seen by the model steering left] [steer_left1]
+![The view as seen on the test simulator steering left][steer_left2]
+![The view as seen by the model steering right][steer_right1]
+![The view as seen by the test simulator steering left][steer_left2]
 
 [Video of the test simulation is here in the lakeside track.] https://youtu.be/B2P188iXLto
 
