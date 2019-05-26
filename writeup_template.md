@@ -19,8 +19,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [NVIDIA_Model]: ./examples/NVIDIA_Model.png "NVIDIA CNN architecture"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[steer_right1]: ./examples/steer_right1.png "Steer Right example1- autonomous mode"
+[image2]: examples/placeholder.png "Grayscaling"
+[steer_right1]: examples/steer_right1.png "Steer Right example1- autonomous mode"
 [steer_right2]: ./examples/steer_right2.png "Steer Right example 2- autonomous mode"
 [steer_left1]: ./examples/steer_left1.png "Steer Left example 1- autonomous mode"
 [steer_left2]: ./examples/steer_left2.png "Steer Left example 2- autonomous mode"
@@ -28,7 +28,8 @@ The goals / steps of this project are the following:
 [steer_straight2]: ./examples/steer_straight2.png "Steer straight example 2- autonomous mode"
 [train_straight]: ./examples/train_straight.png "Steer straight example- training mode"
 [run1.mp4]: ./examples/run1.mp4 "Lakeside driving - autonomous mode"
-[Image_Balancing]: ./examples/balancing_training_data.jpg "Pre and post balancing of training dataset"
+[Image_Balancing]: ./examples/balancing_training_data.png "Pre and post balancing of training dataset"
+[model]: ./examples/model_architecture.png "Model Architecture"
 
 [image5]: ./examples/placeholder_small.png "Recovery Image"
 [image6]: ./examples/placeholder_small.png "Normal Image"
@@ -88,53 +89,7 @@ Between each layer, a RELU activation is also implemented to avoid overfitting a
 
 After the 5th convolutional layer, the data is flattened and there are 4 fully connected layers with the kernal regularizer that drives outlier weights close to 0 (such that these features are not actually eliminated) and also a drop out of 50% betweem each connected layer, again to reduce overfitting.
 
-The below table is a summary of the CNN implementation.
-
-Layer (type)                 Output Shape              Param 
-=================================================================
-lambda_1 (Lambda)            (None, 64, 64, 3)         0
-_________________________________________________________________
-conv2d_1 (Conv2D)            (None, 30, 30, 24)        1824
-_________________________________________________________________
-activation_1 (Activation)    (None, 30, 30, 24)        0
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 13, 13, 36)        21636
-_________________________________________________________________
-activation_2 (Activation)    (None, 13, 13, 36)        0
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 5, 5, 48)          43248
-_________________________________________________________________
-activation_3 (Activation)    (None, 5, 5, 48)          0
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 3, 3, 64)          27712
-_________________________________________________________________
-activation_4 (Activation)    (None, 3, 3, 64)          0
-_________________________________________________________________
-conv2d_5 (Conv2D)            (None, 1, 1, 64)          36928
-_________________________________________________________________
-activation_5 (Activation)    (None, 1, 1, 64)          0
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 64)                0
-_________________________________________________________________
-dense_1 (Dense)              (None, 80)                5200
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 80)                0
-_________________________________________________________________
-dense_2 (Dense)              (None, 40)                3240
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 40)                0
-_________________________________________________________________
-dense_3 (Dense)              (None, 16)                656
-_________________________________________________________________
-dropout_3 (Dropout)          (None, 16)                0
-_________________________________________________________________
-dense_4 (Dense)              (None, 10)                170
-_________________________________________________________________
-dense_5 (Dense)              (None, 1)                 11
-=================================================================
-Total params: 140,625
-Trainable params: 140,625
-Non-trainable params: 0
+![The below table is a summary of the CNN implementation.][model]
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -190,7 +145,7 @@ I was able to experiment with different datasets such as "wobble driving" 2x ful
 The model is successful in steering robustly in the lakeside track, a minimum of 1 epochs is required for correct steering and successful driving.
 
 Image Balancing is shown here, prior to balancing of the dataset a large portion of the dataset was straight steering.
-[Image_Balancing]
+![Pre and post balancing of training dataset][Image_Balancing]
 
 As discussed earlier, the straight steering sample set was pruned to balance the data.
 
@@ -218,7 +173,7 @@ The final model architecture (`model.py` `lines 18-24`) consisted of a convoluti
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-[An example of the recording for straight steering that was used for training][[train_straight].
+![An example of the recording for straight steering that was used for training][train_straight].
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer to the center.
 I did this using a "wobble" driving method, it was not effective as I needed to remove the steering drift so to speak.  In the end, I did not need recovery data because my 2x laps contained recovery in there or close calls and I had pruned and balanced my dataset.
@@ -227,21 +182,21 @@ I did not repeat the process on track 2, as I wanted to test he model performanc
 If not I will then add training with track 2.
 
 Here are some examples of driving behaviour in autonomous mode.  
-[straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
+![straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
 
-[Another example of straigh steering performed by the model][steer_straight2]
+![Another example of straigh steering performed by the model][steer_straight2]
 The view as seen by the model.
-[steer_left1] [steer_left1.png]
+![steer_left1] [steer_left1]
 The view as seen on the test simulator.
-[steer_left2] [steer_left2.png]
+![steer_left2] [steer_left2]
 
 The view as seen by the model
-[steer_right1] [steer_right1.png]
+![steer_right1] [steer_right1]
 
 The view as seen by the test simulator
-[steer_right2] [steer_left2.png]
+![steer_right2] [steer_left2]
 
-[Video of the test simulation is here in the lakeside track.] [https://youtu.be/B2P188iXLto]
+[Video of the test simulation is here in the lakeside track.] https://youtu.be/B2P188iXLto
 
 #### 4. Acknowledgements and closing remarks
 The next challenge will be to prepare a model capable of driving autonomously on the jungle track. 
