@@ -156,6 +156,7 @@ Initially 5 laps were recorded oand this was used as training/validation data fo
 By visualising the steering angles (45 bins in total), it was clear that the training data was unbalanced with the straight steering (0) bin beeing many magnitudes higher that would confirm an a bias in the network.  With such a strong bias in the input training data, the network will not train correctly despite how good the model architecture is. 
 
 I resolved this issue by "pruning" the input data, implementing a weighted ratio for any bins that required pruning. 
+
 `for no, label in enumerate(bins):
     count = df["steer"].value_counts()[label]
     if count < target_count:
@@ -189,7 +190,7 @@ I was able to experiment with different datasets such as "wobble driving" 2x ful
 The model is successful in steering robustly in the lakeside track, a minimum of 1 epochs is required for correct steering and successful driving.
 
 Image Balancing is shown here, prior to balancing of the dataset a large portion of the dataset was straight steering.
-[Image_Balancing
+[Image_Balancing]
 
 As discussed earlier, the straight steering sample set was pruned to balance the data.
 
@@ -211,17 +212,13 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (`model.py` `lines 18-24`) consisted of a convolution neural network with the following layers and layer sizes discussed above.
-
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
-
-![alt text][image1]
+The final model architecture (`model.py` `lines 18-24`) consisted of a convolution neural network with the following layers and layer sizes discussed above in section 1.
 
 #### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![An example of the recording for straight steering that was used for training][[train_straight].
+[An example of the recording for straight steering that was used for training][[train_straight].
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to steer to the center.
 I did this using a "wobble" driving method, it was not effective as I needed to remove the steering drift so to speak.  In the end, I did not need recovery data because my 2x laps contained recovery in there or close calls and I had pruned and balanced my dataset.
@@ -232,19 +229,19 @@ If not I will then add training with track 2.
 Here are some examples of driving behaviour in autonomous mode.  
 [straight steering][steer_straight1]  Note that this is a screenshot taken while running the simulation.
 
-![Another example of straigh steering performed by the model][steer_straight2]
+[Another example of straigh steering performed by the model][steer_straight2]
 The view as seen by the model.
-![steer_left1] [steer_left1.png]
+[steer_left1] [steer_left1.png]
 The view as seen on the test simulator.
-![steer_left2] [steer_left2.png]
+[steer_left2] [steer_left2.png]
 
 The view as seen by the model
-![steer_right1] [steer_right1.png]
+[steer_right1] [steer_right1.png]
 
 The view as seen by the test simulator
-![steer_right2] [steer_left2.png]
+[steer_right2] [steer_left2.png]
 
-![Video of the test simulation is here in the lakeside track.] [https://youtu.be/B2P188iXLto]
+[Video of the test simulation is here in the lakeside track.] [https://youtu.be/B2P188iXLto]
 
 #### 4. Acknowledgements and closing remarks
 The next challenge will be to prepare a model capable of driving autonomously on the jungle track. 
